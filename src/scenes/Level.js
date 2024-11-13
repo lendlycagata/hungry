@@ -216,7 +216,7 @@ export default class Level extends Phaser.Scene {
     dino.body.setSize(250, 250, false);
 
     // arcadeimage_1
-    const arcadeimage_1 = new FoodPrefab(this, 178, 546);
+    const arcadeimage_1 = new FoodPrefab(this, 178, 246);
     this.add.existing(arcadeimage_1);
     arcadeimage_1.scaleX = 0.6;
     arcadeimage_1.scaleY = 0.6;

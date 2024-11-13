@@ -13,7 +13,7 @@
     },
     "displayList": [
         {
-            "type": "ArcadeImage",
+            "type": "Arcade",
             "id": "43019c6b-26f6-4edb-851e-21123db81249",
             "label": "arcadeimage_1",
             "texture": {
