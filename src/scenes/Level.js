@@ -307,11 +307,106 @@ export default class Level extends Phaser.Scene {
   playerVelocity = 200;
   score = 0;
 
+  //   create() {
+  //     this.editorCreate();
+
+  //     // Add touch areas for mobile controls
+  //     this.createTouchControls();
+  //   }
   create() {
     this.editorCreate();
 
-    // Add touch areas for mobile controls
-    this.createTouchControls();
+    // Add button graphics
+    const buttonSize = 50; // Size of the buttons
+    const buttonSpacing = 10; // Space between buttons
+
+    const screenWidth = this.scale.width;
+    const screenHeight = this.scale.height;
+
+    const buttonY = screenHeight - buttonSize - buttonSpacing;
+
+    // Right Button
+    this.rightButton = this.add.rectangle(
+      screenWidth - buttonSize - buttonSpacing,
+      buttonY,
+      buttonSize,
+      buttonSize,
+      0x00ff00
+    );
+    this.add
+      .image(screenWidth - buttonSize - buttonSpacing, buttonY, "arrow-right")
+      .setDisplaySize(buttonSize * 0.6, buttonSize * 0.6);
+
+    // Left Button
+    this.leftButton = this.add.rectangle(
+      screenWidth - 2 * (buttonSize + buttonSpacing),
+      buttonY,
+      buttonSize,
+      buttonSize,
+      0x00ff00
+    );
+    this.add
+      .image(
+        screenWidth - 2 * (buttonSize + buttonSpacing),
+        buttonY,
+        "arrow-left"
+      )
+      .setDisplaySize(buttonSize * 0.6, buttonSize * 0.6);
+
+    // Up Button
+    this.upButton = this.add.rectangle(
+      screenWidth - buttonSize - buttonSpacing,
+      buttonY - (buttonSize + buttonSpacing),
+      buttonSize,
+      buttonSize,
+      0x00ff00
+    );
+    this.add
+      .image(
+        screenWidth - buttonSize - buttonSpacing,
+        buttonY - (buttonSize + buttonSpacing),
+        "arrow-up"
+      )
+      .setDisplaySize(buttonSize * 0.6, buttonSize * 0.6);
+
+    // Down Button
+    this.downButton = this.add.rectangle(
+      screenWidth - buttonSize - buttonSpacing,
+      buttonY + (buttonSize + buttonSpacing),
+      buttonSize,
+      buttonSize,
+      0x00ff00
+    );
+    this.add
+      .image(
+        screenWidth - buttonSize - buttonSpacing,
+        buttonY + (buttonSize + buttonSpacing),
+        "arrow-down"
+      )
+      .setDisplaySize(buttonSize * 0.6, buttonSize * 0.6);
+
+    // Enable interactivity for buttons
+    this.rightButton.setInteractive();
+    this.leftButton.setInteractive();
+    this.upButton.setInteractive();
+    this.downButton.setInteractive();
+
+    this.rightButton.on("pointerdown", () => {
+      this.dino.setVelocityX(this.playerVelocity);
+    });
+    this.leftButton.on("pointerdown", () => {
+      this.dino.setVelocityX(-this.playerVelocity);
+    });
+    this.upButton.on("pointerdown", () => {
+      this.dino.setVelocityY(-this.playerVelocity);
+    });
+    this.downButton.on("pointerdown", () => {
+      this.dino.setVelocityY(this.playerVelocity);
+    });
+
+    this.input.on("pointerup", () => {
+      this.dino.setVelocity(0, 0);
+    });
   }
 
   update() {
