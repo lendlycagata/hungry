@@ -1,0 +1,34 @@
+{
+    "id": "61e34b61-d6ae-4e17-b986-e892a951e295",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Title",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "73355971-482f-48f7-8cb0-35ec15691d98",
+            "label": "text_1",
+            "x": 640,
+            "y": 360,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "Hungry Dinosaur",
+            "fontSize": "64px"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

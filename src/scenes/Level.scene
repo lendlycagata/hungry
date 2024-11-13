@@ -1,0 +1,210 @@
+{
+    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "ArcadeImage",
+            "id": "7d5827fd-34f6-473f-90e0-b9424a51d5fa",
+            "label": "dino",
+            "scope": "CLASS",
+            "texture": {
+                "key": "dino"
+            },
+            "x": 634,
+            "y": 377,
+            "scaleX": 0.75,
+            "scaleY": 0.75,
+            "collideWorldBounds": true,
+            "body.width": 250,
+            "body.height": 250
+        },
+        {
+            "prefabId": "d885f71a-c466-40e9-aec9-33c989902e4e",
+            "id": "843880a3-f3b0-4b9e-86c6-6d5942765441",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY",
+                "tintTopRight",
+                "tintBottomLeft",
+                "tintBottomRight",
+                "tintTopLeft"
+            ],
+            "label": "arcadeimage_1",
+            "x": 178,
+            "y": 546,
+            "scaleX": 0.6,
+            "scaleY": 0.6,
+            "tintTopLeft": "#bec3ff",
+            "tintTopRight": "#bec3ff",
+            "tintBottomLeft": "#bec3ff",
+            "tintBottomRight": "#bec3ff"
+        },
+        {
+            "prefabId": "d885f71a-c466-40e9-aec9-33c989902e4e",
+            "id": "cf65be29-0446-46e7-8529-53ce702b67c6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "foodPrefab",
+            "x": 1120,
+            "y": 525
+        },
+        {
+            "type": "Layer",
+            "id": "4f29b628-e4aa-4a04-8ad6-b10f5a8736cd",
+            "label": "ui",
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "2f606f3f-409c-4c5d-9607-5566a0825863",
+                    "label": "scoreText",
+                    "scope": "CLASS",
+                    "x": 10,
+                    "y": 10,
+                    "text": "Score: 0",
+                    "fontSize": "48px"
+                }
+            ]
+        },
+        {
+            "prefabId": "43fd5ff6-3ff3-4b83-b1e0-23a5fe7c7ae6",
+            "id": "c9b56652-6f80-42c8-8c14-6a66d40c6db1",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "burgerPrefab",
+            "x": 652,
+            "y": 89
+        },
+        {
+            "prefabId": "b6f188bd-23a9-4161-8651-dbdc5781c3a7",
+            "id": "b70d8f2c-6de0-424b-bbbe-b26a824b6d1f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "tile_0000",
+            "x": 364,
+            "y": 534
+        },
+        {
+            "prefabId": "b6f188bd-23a9-4161-8651-dbdc5781c3a7",
+            "id": "05c3f1f1-6d15-4f25-87fb-34fe8085ac12",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "tile",
+            "x": 902,
+            "y": 549
+        },
+        {
+            "prefabId": "b6f188bd-23a9-4161-8651-dbdc5781c3a7",
+            "id": "a606216d-7c32-4890-ae2b-4bc152d52490",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "tile_1",
+            "x": 899,
+            "y": 177
+        },
+        {
+            "prefabId": "b6f188bd-23a9-4161-8651-dbdc5781c3a7",
+            "id": "157be771-e1ae-42b6-8399-52bc0c36f842",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "tile_2",
+            "x": 348.39477072196263,
+            "y": 171.78084593533595
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "9d29f0b0-d50a-44e3-a632-6aec12ea5be0",
+            "type": "Keyboard.Key",
+            "label": "upKey",
+            "keyCode": "UP"
+        },
+        {
+            "id": "e8cde030-c3d0-421f-9a8c-05a803e136da",
+            "type": "Keyboard.Key",
+            "label": "downKey",
+            "keyCode": "DOWN"
+        },
+        {
+            "id": "49835b9d-f861-488f-a189-d6cde5ca0014",
+            "type": "Keyboard.Key",
+            "label": "leftKey",
+            "keyCode": "LEFT"
+        },
+        {
+            "id": "7076a05a-46f4-41d8-8de0-6651c5044342",
+            "type": "Keyboard.Key",
+            "label": "rightKey",
+            "keyCode": "RIGHT"
+        },
+        {
+            "id": "242cf7c0-f0f9-4326-a54f-870bd0db0e64",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "LOCAL",
+            "object1": "dino",
+            "object2": "wall"
+        },
+        {
+            "id": "9c1f0f5e-2bdf-4ce5-abd4-60c4f6e9ff74",
+            "type": "Collider",
+            "label": "collider_1",
+            "scope": "LOCAL",
+            "object1": "dino",
+            "object2": "food",
+            "overlapOnly": true,
+            "collideCallback": "this.eatFruit",
+            "callbackContext": "this"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "a43fa4c3-50f7-4df2-9d47-58f47d4c2398",
+            "label": "food",
+            "objectIds": [
+                "843880a3-f3b0-4b9e-86c6-6d5942765441",
+                "cf65be29-0446-46e7-8529-53ce702b67c6",
+                "c9b56652-6f80-42c8-8c14-6a66d40c6db1"
+            ]
+        },
+        {
+            "id": "455bb196-2866-4e99-9fec-e9e656d82402",
+            "label": "wall",
+            "objectIds": [
+                "157be771-e1ae-42b6-8399-52bc0c36f842",
+                "a606216d-7c32-4890-ae2b-4bc152d52490",
+                "05c3f1f1-6d15-4f25-87fb-34fe8085ac12",
+                "b70d8f2c-6de0-424b-bbbe-b26a824b6d1f"
+            ]
+        }
+    ]
+}
